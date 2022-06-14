@@ -26,12 +26,19 @@ database.connect()
 
 //handle MQTT
 var mqttClient = mqtt.connect('mqtt://broker.hivemq.com:1883')
-var topic = 'testAPI'
-var message = { id: 11, packet_no: 126, temperature: 30, humidity: 60, tds: 1100, pH: 5.0 }
-message = JSON.stringify(message)
+var topic = '/team15/messages'
 const dataModel = require('./models/dataModel')
+var message
+var count = -1
+setInterval(()=>{ 
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    count+=1
+    message = { id: count, state: 0, temperature: getRandomArbitrary(30, 35).toFixed(1), humidity: getRandomArbitrary(55,65).toFixed(0), tds: getRandomArbitrary(1000, 1300).toFixed(0), pH: getRandomArbitrary(4 , 5).toFixed(1) }
+    message = JSON.stringify(message)
+}, 9999)
 mqttClient.on('connect', () => {
-    console.log('Mqtt connected')
     setInterval(() => {
         mqttClient.publish(topic, message)
         console.log('Message sent')
