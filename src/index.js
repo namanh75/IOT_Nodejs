@@ -9,6 +9,7 @@ const mqtt = require('mqtt')
 require('dotenv').config()
 const route = require('./routes/routing')
 const database = require('./config/connect')
+const mqttconfig = require('./mqtt/mqttconfig')
 
 const app = express()
 
@@ -25,38 +26,9 @@ route(app)
 database.connect()
 
 //handle MQTT
-var mqttClient = mqtt.connect('mqtt://broker.hivemq.com:1883')
-var topic = '/team15/messages'
-const dataModel = require('./models/dataModel')
-var message
-var count = -1
-setInterval(()=>{ 
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-    count+=1
-    message = { id: count, state: 0, temperature: getRandomArbitrary(30, 35).toFixed(1), humidity: getRandomArbitrary(55,65).toFixed(0), tds: getRandomArbitrary(1000, 1300).toFixed(0), pH: getRandomArbitrary(4 , 5).toFixed(1) }
-    message = JSON.stringify(message)
-}, 9999)
-mqttClient.on('connect', () => {
-    setInterval(() => {
-        mqttClient.publish(topic, message)
-        console.log('Message sent')
-    }, 10 * 1000)
-    setInterval(() => {
-        mqttClient.subscribe(topic)
-        console.log('Message received')
-    }, 10 * 1000)
-})
-mqttClient.on('message', function (topic, message) {
-    console.log(topic + ' : ' + message)
-    const data = new dataModel(JSON.parse(message))
-    data.save()
-        .then(message => {
-            console.log('Message saved : ' + message)
-        })
-        .catch(err => console.log(err))
-})
+mqttconfig.init()
+mqttconfig.connect()
+mqttconfig.message()
 
 //listen
 const port = process.env.PORT
