@@ -2,6 +2,7 @@ const mqtt = require('mqtt')
 
 var mqttClient = mqtt.connect('mqtt://broker.hivemq.com:1883')
 var topic = '/team15/messages'
+var topicControl='/team15/control'
 const dataModel = require('../models/dataModel')
 var message
 var count = -1
@@ -22,14 +23,14 @@ class mqttconfig{
     }
     connect(){
         mqttClient.on('connect', () => {
-            setInterval(() => {
-                mqttClient.publish(topic, message)
-                console.log('Message sent')
-            }, 10 * 1000)
+            // setInterval(() => {
+            //     mqttClient.publish(topic, message)
+            //     console.log('Message sent')
+            // }, 5 * 1000)
             setInterval(() => {
                 mqttClient.subscribe(topic)
                 console.log('Message received')
-            }, 10 * 1000)
+            }, 5 * 1000)
         })
     }
     
