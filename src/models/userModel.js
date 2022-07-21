@@ -5,7 +5,7 @@ const users=new Schema({
     id: String,
     account: String,
     password: String,
-    name: String,
+    username: String,
 }, {
     timestamps: true,   
 })

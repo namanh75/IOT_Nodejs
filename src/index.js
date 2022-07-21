@@ -20,6 +20,7 @@ app.set('view engine', 'handlebars')
 app.set('views', path.join(__dirname, 'views'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
+app.use(express.json())
 
 route(app)
 

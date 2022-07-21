@@ -1,0 +1,39 @@
+*{
+    
+}
+.content-1{
+    display: flex;
+}
+.humidity{
+    height: 350px;
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 7%;
+}
+.temperature{
+    height: 350px;
+    width: 40%;
+    margin-left: 7%;
+    
+    border-radius: 10px;
+}
+.content-2{
+    margin-top: 75px;
+    display: flex;
+    margin-bottom: 100px;
+}
+.tds{
+    height: 350px;
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 7%;
+}
+.ph{
+    height: 350px;
+    width: 40%;
+    margin-left: 7%;
+    border-radius: 10px;
+}
+#container{
+    cursor: pointer;
+}

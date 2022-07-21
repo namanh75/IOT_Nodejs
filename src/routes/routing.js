@@ -5,7 +5,7 @@ function route(app){
 
     app.use('/api', apiRoute)
 
-    app.use('/', siteRoute )
+    app.use('/', siteRoute)
 
 }
 

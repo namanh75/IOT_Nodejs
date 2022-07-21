@@ -1,3 +1,37 @@
-<h1>
-    HOME
-</h1>
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div class="content-1">
+        <div class="temperature">
+            <div class="title">
+                <h3>Chỉ số nhiệt độ (°C)</h3>
+            </div>
+            <div id="container" style="height: 100%"></div>
+        </div>
+        <div class="humidity">
+            <h3>Chỉ số độ ẩm (g/m³)</h3>
+            <div id="container" style="height: 100%"></div>
+        </div>
+    </div>
+    <div class="content-2">
+        <div class="tds">
+            <h3>Chỉ số TDS (ppm)</h3>
+            <div id="container" style="height: 100%"></div>
+        </div>
+        <div class="ph">
+            <h3>Chỉ số độ pH (mol/l)</h3>
+            <div id="container" style="height: 100%"></div>
+        </div>
+    </div>
+
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

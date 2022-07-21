@@ -1,3 +1,33 @@
-<h1>
-    Login
-</h1>
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body style="margin: 0">
+    <div class="login">
+        <form action="/login" method="post">
+            <h3>Hệ thống cảnh báo cháy - Nhóm 15</h3>
+            <h3>Form đăng nhập</h3>
+            <p>(Vui lòng đăng nhập để sử dụng hệ thống)</p>
+            <label for="">
+                <i>Nhập tên đăng nhập</i> </label>
+            <input type="text" name="account" required="true" placeholder="Enter your account">
+            <label for="">
+                <i>Nhập mật khẩu</i></label>
+            <input type="password" name="password" required="true" placeholder="Enter your password">
+            <button class="submit" type="submit">Xác nhận</button>
+        </form>
+        <h5></h5>
+        <a href="/">
+            <h3>Quay lại trang chủ</h3>
+        </a>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const data=new Schema({
     id: Number,
+    account: String,
     state: Number,
     idUser: String,
     humidity: String,

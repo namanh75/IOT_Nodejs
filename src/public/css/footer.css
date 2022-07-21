@@ -1,0 +1,42 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    font-family:  serif;
+}
+a{
+    color:white;
+    font-size: 17px;
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    background-color: #0c0f23de;
+    color: white;
+    
+    display: flex;
+}
+.info-1{
+    height: 100%;
+    width: 25%;
+    margin-left: 5%;
+    text-align: center;
+}
+.info-2{
+    height: 100%;
+    width: 25%;
+    margin-left: 5%;
+    text-align: center;
+}
+.info-3{
+    height: 100%;
+    width: 25%;
+    margin-left: 5%;
+    text-align: center;
+}
+.info-3 a:hover{
+    color: rgb(204, 206, 224);
+}
+p{
+    font-size: 18px;
+}

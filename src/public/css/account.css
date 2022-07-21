@@ -1,0 +1,60 @@
+.logout{
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    padding-top: 15px;
+    position: absolute;
+    right: 100px;
+    color: white;
+    background-color: rgb(210, 6, 6);
+    top: 100px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.logout:hover{
+    background-color:rgb(255, 15, 15);
+    transition: all 0.2s ease-in-out;
+}
+
+.info {
+    width: 85%;
+    margin: 0 auto;
+    color: #0c0f23de;
+    margin-bottom: 100px;
+}
+form .label{ 
+    display: flex;
+}
+form p{
+    font-size: 20px;
+}
+form input{
+    margin-top:10px;
+    left: 300px;
+    width: 50%;
+    height: 35px;
+    border: 1px solid #0c0f23de; 
+    font-size: 20px;
+    position: absolute;
+}
+form button{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    margin-top: 25px;
+    margin-left: 850px;
+    border: pointer solid #0c0f23de;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #0c0f23de;
+    color: white;
+    transition: all 0.2s;
+}
+form h4{
+    margin-left: 30%;
+    margin-top: 35px;
+    color: rgb(52, 227, 61);
+    display: none;
+    position: absolute;
+}

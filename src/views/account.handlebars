@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div class="logout">
+        Đăng xuất
+    </div>
+    <div class="info">
+        <h1>Thông tin tài khoản</h1>
+        <form action="/information/change" method="post">
+            <div class="label account">
+                <p>Tên tài khoản:</p>
+                <input type="text" value="{{user.account}}" name="account">
+            </div>
+            <div class="label password">
+                <p>Mật khẩu:</p>
+                <input type="password" value="{{user.password}}" name="password">
+            </div>
+            <div class="label name">
+                <p>Tên người dùng:</p>
+                <input type="text" value="{{user.username}}" name="username">
+            </div>
+            <div class="label machinecode">
+                <p>Mã thiết bị:</p>
+                <input type="text" value="{{user.machinecode}}" disabled>
+            </div>
+            <button type="submit">Chỉnh sửa</button>
+            <h4>đs</h4>
+            
+        </form>
+    </div>
+    <div class="warning info">
+        <h1>Lịch sử cảnh báo</h1>
+    </div>
+</body>
+<script src="/js/account.js"></script>
+
+</html>

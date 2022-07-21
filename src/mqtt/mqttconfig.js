@@ -38,6 +38,7 @@ class mqttconfig{
         mqttClient.on('message', function (topic, message) {
             console.log(topic + ' : ' + message)
             const data = new dataModel(JSON.parse(message))
+            data.account = 'nam123'
             data.save()
                 .then(message => {
                     console.log('Message saved : ' + message)

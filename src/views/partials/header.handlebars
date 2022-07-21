@@ -1,3 +1,37 @@
-<h1>
-    Header
-</h1>
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/">
+            <h2>Trang chủ</h2>
+        </a>
+
+        <ul>
+            {{!-- <a href="/history">
+                <li class="history">
+                    
+                </li>
+            </a> --}}
+            <a href="/introduction" title="Giới thiệu về hệ thống">
+                <li class="infor">
+                    Giới thiệu
+                </li>
+            </a>
+            <a href="/login" class="alogin" title="Đăng nhập vào hệ thống"> 
+                <li class="login">
+                    Đăng nhập
+                </li>
+            </a>
+        </ul>
+    </div>
+
+</body>
+<script src="/js/header.js"></script>
+
+</html>
