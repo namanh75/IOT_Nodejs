@@ -2,9 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const data=new Schema({
-    id: Number,
     account: String,
-    state: Number,
+    warn: String,
     idUser: String,
     humidity: String,
     temperature: String,

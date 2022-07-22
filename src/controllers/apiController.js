@@ -13,7 +13,7 @@ class apiController {
     data(req, res, next) {
         if (req.cookies.tokenLogin) {
             jwt.verify(req.cookies.tokenLogin, key, function (err, data) {
-                dataModel.where({}).sort({ "_id": -1 }).find({account: data.account}).limit(10)
+                dataModel.where({}).sort({ "_id": -1 }).find({account: data.account})
                     .then(data => {
                         res.json(data)
                     })

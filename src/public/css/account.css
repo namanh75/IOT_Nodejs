@@ -58,3 +58,22 @@ form h4{
     display: none;
     position: absolute;
 }
+.warning h1{
+    border-bottom: solid 1px black;
+}
+.warning p{
+    margin-left: 100px;
+}
+.warning-fire{
+    color: red;
+}
+.warning-gas{
+    color:grey;
+}
+.warning-hot{
+    color: rgb(226, 112, 26);
+}
+.border{
+    border-bottom: 1px solid black;
+}
+   

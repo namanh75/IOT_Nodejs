@@ -7,9 +7,12 @@
 </head>
 
 <body style="height: 100%; margin: 0">
-    <div class="logout">
-        Đăng xuất
-    </div>
+    <a href="/logout">
+        <div class="logout">
+            Đăng xuất
+        </div>
+    </a>
+
     <div class="info">
         <h1>Thông tin tài khoản</h1>
         <form action="/information/change" method="post">
@@ -30,12 +33,21 @@
                 <input type="text" value="{{user.machinecode}}" disabled>
             </div>
             <button type="submit">Chỉnh sửa</button>
-            <h4>đs</h4>
-            
+            <h4></h4>
+
         </form>
     </div>
     <div class="warning info">
         <h1>Lịch sử cảnh báo</h1>
+        <h3>Cảnh báo cháy nổ</h3>
+        <div class="warning-fire border">
+        </div>
+        <h3>Cảnh báo rò rỉ gas</h3>
+        <div class="warning-gas border">
+        </div>
+        <h3>Cảnh báo nhiệt độ</h3>
+        <div class="warning-hot border">
+        </div>
     </div>
 </body>
 <script src="/js/account.js"></script>

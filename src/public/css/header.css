@@ -1,44 +1,119 @@
-*{
+* {
     text-decoration: none;
     list-style-type: none;
-    font-family:  serif;
+    font-family: serif;
 }
-a{
-    color:white
+
+a {
+    color: white
 }
-.header{
+
+.header {
     height: 70px;
     width: 100%;
     display: flex;
     background-color: #0c0f23de;
     color: white;
 }
-.header h2{
+
+.header h2 {
     margin-left: 100px;
     cursor: pointer;
 }
-.header ul{
+
+.header ul {
     position: absolute;
     right: 100px;
     padding: 0;
 }
-.header ul li{
+
+.header ul li {
     display: inline-block;
     font-size: 20px;
     height: 40px;
     width: 150px;
     margin-top: 0;
-    margin-bottom:0;
+    margin-bottom: 0;
     text-align: center;
-    padding-top: 14px; 
+    padding-top: 14px;
 }
-.header ul li:hover{
+
+.header ul li:hover {
     background-color: white;
     color: #0c0f23de;
     transition: all 0.5s;
     cursor: pointer;
 }
-.header ul li a:hover{
+
+.header ul li a:hover {
     color: #0c0f23de;
     transition: all 0.2s
+}
+
+.warn {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: none;
+}
+.fire{
+    border: solid 5px red;
+    background-color: rgba(246, 54, 54, 0.5);
+    animation: fire-warning 2s;
+    animation-iteration-count: 1000;
+}
+.gas{
+    border: solid 5px red;
+    background-color: rgba(246, 54, 54, 0.5);
+    animation:gas-warning 2s;
+    animation-iteration-count: 1000;
+}
+.hot{
+    border:  5px solid rgb(255, 111, 0);
+    background-color: rgb(248, 158, 90, 0.5);
+    animation:  hot-warning 2s;
+    animation-iteration-count: 1000;
+}
+.warn img{
+    width: 200px;
+    height: 200px;
+    margin-left: 42%;
+    margin-top: 100px;
+}
+
+
+@keyframes fire-warning {
+    0% {
+        background-color: red;  
+    }
+    50% {
+        background-color: rgba(246, 54, 54, 0.5)
+    }
+    100%{
+        background-color: red;
+    }
+}
+@keyframes gas-warning{
+    0% {
+        background-color: grey;  
+    }
+    50% {
+        background-color: rgba(210, 207, 207, 0.5)
+    }
+    100%{
+        background-color: grey;
+    }
+}
+@keyframes hot-warning{
+    0% {
+        background-color: rgb(255, 111, 0);  
+    }
+    50% {
+        background-color: rgb(248, 158, 90, 0.5)
+    }
+    100%{
+        background-color: rgb(255, 111, 0);
+    }
 }
