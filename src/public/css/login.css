@@ -19,8 +19,8 @@ a{
 }
 .login h3{
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    /* padding-top: 2px;
+    padding-bottom: 2px; */
 }
 .login p{
     text-align: center;
@@ -61,11 +61,29 @@ input{
 h5{
     color: red;
     text-align: center;
-    position: relative;
-    top: 100px;
+    position: absolute;
+    top: 410px;
+    left: 50%;
+    transform: translatex(-50%);
+
 }
 .login a h3{
+    width: 300px;
+    height: 50px;
     margin-top: 150px;
     color: #0c0f23de;
     font-size: 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+    font-size: 20px;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.login a h3:hover{
+    background-color: #0c0f23de;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    
 }

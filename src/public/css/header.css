@@ -51,12 +51,13 @@ a {
 }
 
 .warn {
+    margin: 0 auto;
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 1000;
     box-sizing: border-box;
     display: none;
+    z-index: 3000;
 }
 .fire{
     border: solid 5px red;

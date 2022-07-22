@@ -20,6 +20,9 @@ $("form").submit(function (e) {
             else{
                 console.log('status:', data.message);
                 document.querySelector('h5').innerHTML = data.message;
+                setTimeout(function() {
+                    document.querySelector('h5').innerHTML = '';
+                },5000)
             }
 
         })
