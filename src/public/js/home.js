@@ -8,13 +8,21 @@ fetch('http://localhost:4000/api/data')
             useDirtyRect: false
         });
         var app = {};
+        for (var i = 0; i < 7; i++) {
+            if (data[i]) {
 
+            }
+            else {
+                data[i] = '0'
+            }
+
+        }
         var option;
 
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h','2h', '1h', 'Now']
+                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -44,13 +52,21 @@ fetch('http://localhost:4000/api/data')
             useDirtyRect: false
         });
         var app = {};
+        for (var i = 0; i < 7; i++) {
+            if (data[i]) {
 
+            }
+            else {
+                data[i] = '0'
+            }
+
+        }
         var option;
 
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h','2h', '1h', 'Now']
+                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -79,13 +95,21 @@ fetch('http://localhost:4000/api/data')
             useDirtyRect: false
         });
         var app = {};
+        for (var i = 0; i < 7; i++) {
+            if (data[i]) {
 
+            }
+            else {
+                data[i] = '0'
+            }
+
+        }
         var option;
 
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h','2h', '1h', 'Now']
+                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -114,13 +138,21 @@ fetch('http://localhost:4000/api/data')
             useDirtyRect: false
         });
         var app = {};
+        for (var i = 0; i < 7; i++) {
+            if (data[i]) {
 
+            }
+            else {
+                data[i] = '0'
+            }
+
+        }
         var option;
 
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h','2h', '1h', 'Now']
+                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
             },
             yAxis: {
                 type: 'value'

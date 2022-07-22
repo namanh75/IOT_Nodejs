@@ -65,7 +65,7 @@ a {
     animation-iteration-count: 1000;
 }
 .gas{
-    border: solid 5px red;
+    border: solid 5px grey;
     background-color: rgba(246, 54, 54, 0.5);
     animation:gas-warning 2s;
     animation-iteration-count: 1000;
