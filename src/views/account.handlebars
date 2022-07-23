@@ -12,6 +12,10 @@
             Đăng xuất
         </div>
     </a>
+    <div class="logout check-on">
+        <span>{{change user.on}}</span> 
+    </div>
+
 
     <div class="info">
         <h1>Thông tin tài khoản</h1>
@@ -30,11 +34,10 @@
             </div>
             <div class="label machinecode">
                 <p>Mã thiết bị:</p>
-                <input type="text" value="{{user.machinecode}}" disabled>
+                <input type="text" value="{{user.id}}" disabled>
             </div>
             <button type="submit">Chỉnh sửa</button>
             <h4></h4>
-
         </form>
     </div>
     <div class="warning info">

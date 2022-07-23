@@ -6,6 +6,7 @@ const users=new Schema({
     account: String,
     password: String,
     username: String,
+    on: String,
 }, {
     timestamps: true,   
 })

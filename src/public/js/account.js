@@ -57,3 +57,28 @@ fetch('http://localhost:4000/api/data')
         if (pHot == '') document.querySelector('.warning-hot').innerHTML = `<p>Không có cảnh báo</p>`
         else document.querySelector('.warning-hot').innerHTML = pHot
     })
+var on=''
+
+document.querySelector('.check-on').onclick = function() {
+    if(document.querySelector('.check-on').innerText=='Tắt hệ thống'){
+        on = 'false'
+        document.querySelector('.check-on span').innerHTML='Bật hệ thống'
+        alert('Đã tắt hệ thống')
+    } 
+    else if(document.querySelector('.check-on').innerText=='Bật hệ thống'){
+        on = 'true'
+        document.querySelector('.check-on span').innerHTML='Tắt hệ thống'
+        alert('Đã bật hệ thống')
+    } 
+    fetch('http://localhost:4000/checkon',{
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({on : on})
+    })
+    .then( response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+}

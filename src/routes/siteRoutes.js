@@ -13,6 +13,8 @@ router.get('/history', siteController.history)
 router.get('/information', accountController.info)
 router.put('/information/change', accountController.change)
 
+router.post('/checkon', siteController.checkOn)
+
 router.get('/', siteController.index)
 
 

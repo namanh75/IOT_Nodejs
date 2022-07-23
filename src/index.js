@@ -15,7 +15,14 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('combined'))
-app.engine('handlebars', handlebars.engine())
+app.engine('handlebars', handlebars.engine({
+    helpers: {
+        change: function(on){
+            if(on=='true') return 'Tắt hệ thống'
+            else if(on=='false') return 'Bật hệ thống'
+        }
+    }
+}))
 app.set('view engine', 'handlebars')
 app.set('views', path.join(__dirname, 'views'))
 app.use(bodyParser.urlencoded({ extended: true }))

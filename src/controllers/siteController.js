@@ -1,6 +1,11 @@
 const userModel = require('../models/userModel')
 const jwt = require('jsonwebtoken')
+const mqtt = require('mqtt')
 const key = process.env.JWT_KEY
+
+var mqttClient = mqtt.connect('mqtt://broker.hivemq.com:1883')
+var topicControl = '/team15/control'
+var messageControl
 class siteController {
 
     //home
@@ -80,15 +85,15 @@ class siteController {
                 else {
                     console.log(data)
                     userModel.findOne({ account: data.account })
-                    .then(userdata => {
-                        // if (err) return console.log(err)
-                        console.log(userdata)
-                        userdata = userdata ? userdata.toObject() : userdata
-                        res.json({
-                            login: 'true',
-                            account: userdata
+                        .then(userdata => {
+                            // if (err) return console.log(err)
+                            console.log(userdata)
+                            userdata = userdata ? userdata.toObject() : userdata
+                            res.json({
+                                login: 'true',
+                                account: userdata
+                            })
                         })
-                    })
                 }
             })
 
@@ -101,6 +106,31 @@ class siteController {
     }
     history(req, res, next) {
         res.render('history')
+    }
+
+    //check on / off system
+    checkOn(req, res, next) {
+        console.log(req.body)
+        var id
+        jwt.verify(req.cookies.tokenLogin, key, function (err, data) {
+            if (err) return console.error(err)
+            userModel.findOne({ account: data.account }, function (err, user) {
+              if(err) return console.error(err)
+              else{
+                id=user.id
+              }  
+            })
+            userModel.updateOne({ account: data.account }, req.body, function (err, data) {
+                console.log(data)
+                res.json({ message: 'Đã thay đổi hệ thống' })                
+                messageControl={id: id, on: req.body.on}
+                var messageSend=JSON.stringify(messageControl)
+                mqttClient.publish(topicControl, messageSend)
+                console.log('Message sent:'+ messageSend)
+            })
+        })
+
+
     }
 }
 
