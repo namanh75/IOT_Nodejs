@@ -25,10 +25,10 @@ class mqttconfig {
     }
     connect() {
         mqttClient.on('connect', () => {
-            setInterval(() => {
-                mqttClient.publish(topic, message)
-                console.log('Message sent')
-            }, 5 * 1000)
+            // setInterval(() => {
+            //     mqttClient.publish(topic, message)
+            //     console.log('Message sent')
+            // }, 5 * 1000)
             setInterval(() => {
                 mqttClient.subscribe(topic)
                 console.log('Message received')
