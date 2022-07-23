@@ -116,7 +116,7 @@ fetch('http://localhost:4000/api/data')
             },
             series: [
                 {
-                    data: [data[6].tds, data[5].tds, data[4].tds, data[3].tds, data[2].tds, data[1].tds, data[0].tds],
+                    data: [data[6].fire, data[5].fire, data[4].fire, data[3].fire, data[2].fire, data[1].fire, data[0].fire],
                     type: 'line'
                 }
             ]
@@ -159,7 +159,7 @@ fetch('http://localhost:4000/api/data')
             },
             series: [
                 {
-                    data: [data[6].pH, data[5].pH, data[4].pH, data[6].pH, data[2].pH, data[1].pH, data[0].pH],
+                    data: [data[6].gas, data[5].gas, data[4].gas, data[6].gas, data[2].gas, data[1].gas, data[0].gas],
                     type: 'line'
                 }
             ]

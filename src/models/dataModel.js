@@ -7,9 +7,8 @@ const data=new Schema({
     warn: String,
     humidity: String,
     temperature: String,
-    tds: String,
-    pH: String,
-    
+    fire: String,
+    gas: String,
 }, {
     timestamps: true,
 })
