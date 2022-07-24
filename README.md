@@ -35,7 +35,7 @@ File "esp32.cpp"
 
 | STT | Họ và tên                  | Nhiệm vụ thực hiện | 
 | --- | -------------------------- | -------------------|
-| 1   | Đào Trọng Hiếu             |	Lập trình thiết bị phần cứng ESP32, Lắp đặt phần cứng, Viết báo cáo, slide thuyết trình, test lỗi | 
-| 2   | Trần Nam Anh               |	Xây dựng API, viết giao diện web, hòan thiện báo cáo, slide thuyết trình, thiết kế cơ sở dữ liệu | 
-| 3   | Lê Xuân Nam                | | 
+| 1   | Đào Trọng Hiếu             |	Lập trình thiết bị phần cứng ESP32, Lắp đặt phần cứng, Viết báo cáo, test lỗi | 
+| 2   | Trần Nam Anh               |	Xây dựng API, viết giao diện web, hòan thiện báo cáo, slide thuyết trình, thiết kế cơ sở dữ liệu, test lỗi| 
+| 3   | Lê Xuân Nam                | Thiết kế slide, tìm hiểu thiết bị, thiết kế giao diện đăng nhập| 
 
