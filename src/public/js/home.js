@@ -22,7 +22,7 @@ fetch('http://localhost:4000/api/data')
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
+                data: ['30s', '25s', '20s', '15s', '10s', '5s', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -66,7 +66,7 @@ fetch('http://localhost:4000/api/data')
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
+                data: ['30s', '25s', '20s', '15s', '10s', '5s', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -109,7 +109,7 @@ fetch('http://localhost:4000/api/data')
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
+                data: ['30s', '25s', '20s', '15s', '10s', '5s', 'Now']
             },
             yAxis: {
                 type: 'value'
@@ -152,7 +152,7 @@ fetch('http://localhost:4000/api/data')
         option = {
             xAxis: {
                 type: 'category',
-                data: ['6h', '5h', '4h', '3h', '2h', '1h', 'Now']
+                data: ['30s', '25s', '20s', '15s', '10s', '5s', 'Now']
             },
             yAxis: {
                 type: 'value'

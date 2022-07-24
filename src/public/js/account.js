@@ -7,7 +7,7 @@ function Submit(e) {
         username: document.querySelector('form .name input').value
     }
     fetch(e.target.action, {
-        method: 'PUT', // or 'PUT'
+        method: 'PUT', 
         headers: {
             'Content-Type': 'application/json',
         },
@@ -71,7 +71,7 @@ document.querySelector('.check-on').onclick = function() {
         alert('Đã bật hệ thống')
     } 
     fetch('http://localhost:4000/checkon',{
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
