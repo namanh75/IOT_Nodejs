@@ -19,7 +19,7 @@ class mqttconfig {
             //     if (err) console.log('error: ' + err)
             //     count = numbercount + 1
             // })
-            message = { id: 'NV001', warn: 'none', temperature: getRandomArbitrary(30, 35).toFixed(1), humidity: getRandomArbitrary(55, 65).toFixed(0), fire: getRandomArbitrary(1000, 1300).toFixed(0), gas: getRandomArbitrary(4, 5).toFixed(1) }
+            message = { id: 'NV001', warn: 'none', temperature: getRandomArbitrary(30, 35).toFixed(1), humidity: getRandomArbitrary(55, 65).toFixed(0), fire: getRandomArbitrary(380, 760).toFixed(0), gas: getRandomArbitrary(0, 5).toFixed(1) }
             message = JSON.stringify(message)
         }, 9999)
     }
