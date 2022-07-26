@@ -41,7 +41,7 @@ String isOn;
 
 /****************   Danh sach TOPIC   ***************/
 const char *dataTopic = "/team15/messages";       // gui du lieu len server
-const char *commandTopic = "/team15/controll"; // nhan lenh tu server
+const char *commandTopic = "/team15/control"; // nhan lenh tu server
 const char *stateTopic = "state";     // gui trang thai len server
 
 /************ Khoi tao cau truc du lieu *************/
@@ -128,13 +128,14 @@ void callback(char *topic, byte *payload, unsigned int length)
       Serial.print((char)payload[i]);
    }
    Serial.println();
+   Serial.println("hi");
 
    if ((String)topic == commandTopic)
    {
       JSONVar command = JSON.parse((String)((const char *)payload));
 
       // kiem tra id thiet bi
-      if ((String)((const char *)command["idDivice"]) == idDevice)
+      if ((String)((const char *)command["id"]) == idDevice)
       {
          Serial.println("Right ID");
          // Tín hiệu nhận được là tín hiệu điều khiển
